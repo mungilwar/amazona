@@ -23,6 +23,7 @@ main {
   /* padding: 1rem; */
   flex: 1;
 }
+
 .products {
   display: flex;
   /* flex-wrap: wrap;
