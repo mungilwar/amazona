@@ -16,11 +16,11 @@ const data = {
     {
       id: '2',
       name: 'Adidas Fit Shirt',
-      slug: 'adidas-slim-shirt',
+      slug: 'adidas-fit-shirt',
       category: 'Shirts',
       image: '/images/p2.jpg',
       price: 100,
-      countInStock: 0,
+      countInStock: 10,
       brand: 'Adidas',
       rating: 4.0,
       numReviews: 10,
