@@ -48,6 +48,7 @@ export default function CartScreen() {
           ) : (
             <ul>
               {cartItems.map((item) => {
+                console.log(item._id);
                 return (
                   <>
                     <li key={item._id}>
@@ -92,7 +93,6 @@ export default function CartScreen() {
                         </Col>
                       </Row>
                     </li>
-                    ;
                   </>
                 );
               })}

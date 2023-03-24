@@ -53,6 +53,9 @@ function ProductScreen() {
   const { state, dispatch: ctxDispatch } = useContext(Store);
   const { cart } = state;
   const addToCartHandler = async () => {
+    // if (!cart.cartItems || cart.cartItems.length === 0) {
+    //   return; // exit the function if the cartItems array is empty or undefined
+    // }
     const existItem = cart.cartItems.find((x) => x._id === product._id);
     const quantity = existItem ? existItem.quantity + 1 : 1;
     const { data } = await axios.get(`/api/products/${product._id}`);
@@ -129,7 +132,10 @@ function ProductScreen() {
                 {product.countInStock > 0 && (
                   <ListGroup.Item>
                     <div className="d-grid">
-                      <Button variant="primary" onClick={addToCartHandler}>
+                      <Button
+                        variant="primary"
+                        onClick={() => addToCartHandler(product)}
+                      >
                         Add to Cart
                       </Button>
                     </div>
