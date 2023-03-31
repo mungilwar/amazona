@@ -1,7 +1,28 @@
 import express from 'express';
 import data from './data.js';
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+import seedRouter from './routes/seedRoutes.js';
+
+dotenv.config();
+
+mongoose
+  .connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
+  .then(() => {
+    console.log('Connected to MongoDB!');
+  })
+  .catch((error) => {
+    console.error('Error connecting to MongoDB:', error);
+  });
 
 const app = express();
+
+app.use('/api/seed', seedRouter);
+//test
+
 app.get('/api/products', (req, res) => {
   res.send(data.products);
 });
