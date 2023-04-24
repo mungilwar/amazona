@@ -7,15 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* header {
-  background-color: #404040;
-  padding: 1rem;
-}
-header a {
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-} */
 .site-container {
   min-height: 100vh;
 }
@@ -55,4 +46,23 @@ main {
 }
 .small-container {
   max-width: 600px;
+}
+.navbar-brand {
+  padding-top: var(--bs-navbar-brand-padding-y);
+  padding-bottom: var(--bs-navbar-brand-padding-y);
+  margin-right: var(--bs-navbar-brand-margin-end);
+  font-size: var(--bs-navbar-brand-font-size);
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.nav-link {
+  display: block;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  font-size: var(--bs-nav-link-font-size);
+  font-weight: var(--bs-nav-link-font-weight);
+  color: white;
+  text-decoration: none;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
 }
